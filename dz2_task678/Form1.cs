@@ -13,6 +13,7 @@ namespace dz2_task678
     public partial class DateTimeForm : Form
     {
         string oldText;
+        bool notDate;
 
         public DateTimeForm()
         {
@@ -25,6 +26,7 @@ namespace dz2_task678
         {
             UserDate.Text = "";
             oldText = "";
+            notDate = false;
 
             UserDate.TextChanged += UserDate_TextChanged;
 
@@ -51,7 +53,10 @@ namespace dz2_task678
 
         private void CalculateButton_Click(object sender, EventArgs e)
         {
-            GetDayFromDate();
+            if (!notDate)
+            {
+                GetDayFromDate();
+            }
         }
 
         private void UserDate_KeyUp(object sender, KeyEventArgs e)
@@ -69,7 +74,7 @@ namespace dz2_task678
                 oldText = UserDate.Text;
             }
 
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter && !notDate)
             {
                 if(UserDate.Text.Length == 10)
                 {
@@ -84,12 +89,11 @@ namespace dz2_task678
             ResultTextLabel.Visible = false;
             ResultText.Visible = false;
             UserDate.Text = "";
+            notDate = false;
         }
 
         private void UserDate_TextChanged(object sender, EventArgs e)
         {
-
-
             TextBox tb = sender as TextBox;
 
             if (tb.Text.Length != 0)
@@ -125,14 +129,21 @@ namespace dz2_task678
 
             try
             {
-                ResultTextLabel.Visible = true;
-                ResultText.Visible = true;
                 DateTime userDate;
                 DateTime.TryParse(UserDate.Text, out userDate);
+
+                if (userDate.ToString() == "01.01.01 00:00:00")
+                {
+                    throw new Exception("Не правильная дата");
+                }
+
                 day = userDate.DayOfWeek.ToString();
                 CalculateButton.Enabled = false;
 
-                switch(day)
+                ResultTextLabel.Visible = true;
+                ResultText.Visible = true;
+
+                switch (day)
                 {
                     case "Mondey":
                         ResultText.Text = "Понедельник";
@@ -161,10 +172,10 @@ namespace dz2_task678
                 }
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
-                MessageBox.Show("Вы ввели не правельную дату!", "Count day From");
+                notDate = true;
+                MessageBox.Show(e.Message);
             }
         }
     }
