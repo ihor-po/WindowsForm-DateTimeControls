@@ -1,0 +1,10 @@
+X:\Step\WinForms\DZ2\WindowsForm-DateTimeControls\dz2_task678_8\bin\Debug\dz2_task678_8.exe.config
+X:\Step\WinForms\DZ2\WindowsForm-DateTimeControls\dz2_task678_8\bin\Debug\dz2_task678_8.exe
+X:\Step\WinForms\DZ2\WindowsForm-DateTimeControls\dz2_task678_8\bin\Debug\dz2_task678_8.pdb
+X:\Step\WinForms\DZ2\WindowsForm-DateTimeControls\dz2_task678_8\obj\Debug\dz2_task678_8.csprojResolveAssemblyReference.cache
+X:\Step\WinForms\DZ2\WindowsForm-DateTimeControls\dz2_task678_8\obj\Debug\dz2_task678_8.MainForm.resources
+X:\Step\WinForms\DZ2\WindowsForm-DateTimeControls\dz2_task678_8\obj\Debug\dz2_task678_8.Properties.Resources.resources
+X:\Step\WinForms\DZ2\WindowsForm-DateTimeControls\dz2_task678_8\obj\Debug\dz2_task678_8.csproj.GenerateResource.Cache
+X:\Step\WinForms\DZ2\WindowsForm-DateTimeControls\dz2_task678_8\obj\Debug\dz2_task678_8.csproj.CoreCompileInputs.cache
+X:\Step\WinForms\DZ2\WindowsForm-DateTimeControls\dz2_task678_8\obj\Debug\dz2_task678_8.exe
+X:\Step\WinForms\DZ2\WindowsForm-DateTimeControls\dz2_task678_8\obj\Debug\dz2_task678_8.pdb

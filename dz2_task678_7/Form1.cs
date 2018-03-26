@@ -66,7 +66,7 @@ namespace dz2_task678_7
 
         private void RbYear_CheckedChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
